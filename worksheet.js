@@ -38,7 +38,7 @@ var sum = function(num1,num2) {
 // repeating yourself, use your sum function inside 
 // of your average function.
 var average = function(num1,num2) {
-	return sum(num1,num2)/2
+	return (sum(num1,num2)/2)
 }
 
 // Part 4
@@ -117,7 +117,7 @@ var isOneString = function(input1,inpu2) {
 
 var doTwice = function(func) {
 	for (i=0; i<2; i++) {
-		return func
+		func()
 	}
 }
 
@@ -137,7 +137,9 @@ doTwice(helloWorld) // should print 'hello world' to the console twice.
 // "YES." Otherwise, it will does nothing.
 
 var conditionallyInvoke = function(func) {
-	if (ORACLE === 'YES') 
+	if (ORACLE === 'YES') {
+		func()
+	}
 }
 
 var ORACLE = 'NO'
